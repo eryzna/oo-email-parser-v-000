@@ -9,5 +9,7 @@ class EmailParser
   end
   def parse
     email_list=emails.split {(/\s|","/)}
+    email_list.delete_if {|e| e.length == 0}
+    email_list
   end
 end
