@@ -8,11 +8,8 @@ class EmailParser
     @emails=emails
   end
   def parse
-    if emails.include? (",")
-      emails.split(", ")
-    else
-      emails.split
-    end
-
+    emails.split.map do |email|
+      email.split(',')
+    end.flatten.uniq
   end
 end
