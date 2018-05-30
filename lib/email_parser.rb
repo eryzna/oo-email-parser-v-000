@@ -13,3 +13,11 @@ class EmailParser
     end.flatten.uniq
   end
 end
+
+#my code
+#def parse
+  #if emails.include? (",")
+    #emails.split(", ")
+  #else
+    #emails.split
+  #end
