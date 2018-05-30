@@ -8,8 +8,11 @@ class EmailParser
     @emails=emails
   end
   def parse
-    email_list=emails.split {(/\s|","/)}
-    email_list.delete_if {|e| e.length <= 3}
-    email_list
+    if emails.include? (",")
+      email_list=emails.split(",")
+    else 
+      email_list=emails.split(" ")
+    end
+  
   end
 end
