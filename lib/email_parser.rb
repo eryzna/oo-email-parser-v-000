@@ -11,7 +11,7 @@ class EmailParser
     if emails.include? (",")
       email_list=emails.split(", ")
     else
-      email_list=emails.split(\/s\)
+      email_list=emails.split
     end
 
   end
